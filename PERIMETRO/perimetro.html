@@ -1,0 +1,27 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> <!-- PARA CORRETA
+ACENTUAÇÃO -->
+<title>PERIMETRO DE TRIANGULO</title>
+<script src='funcoes.js'></script> <!-- DECLARAÇÃO QUE ESTÁ USANDO O ARQUIVO funcoes.js, QUE TEM QUE ESTAR NA MESMA
+PASTA DESTE ARQUIVO HTML -->
+<br>
+base:
+<br> <!-- PULA LINHA -->
+<input type="number" id="base" value="30"> <!-- CAIXA DE TEXTO -->
+<br>
+altura:<br>
+<input type="number" id="altura" value="40"> <!-- CAIXA DE TEXTO -->
+<br><br>
+<button onclick="fper()">PERIMETRO</button> <!-- BOTÃO QUE CHAMA A FUNÇÃO farea, QUE ESTÁ NO ARQUIVO funcoes.js-->
+Perimetro de triangulo = <ins id="dper"></ins> <!-- darea É UMA VARIÁVEL USADA PARA MOSTRAR O RESULTADO -->
+</html>
+
+<script>function fper() { 
+b = document.getElementById("base").value; //lê o número na caixa "base", no arquivo html, e grava em b
+b=Number(b); //para garantir que é número
+a = document.getElementById("altura").value; //lê o número na caixa "altura", no arquivo html, e grava em a
+a=Number(a); //para garantir que é número
+h=Math.sqrt(Math.pow(a,2)+Math.pow(b,2));
+perimetro=h+b+a
+document.getElementById("dper").innerHTML = perimetro; //mostrando a área em "darea", no html
+}</script>
